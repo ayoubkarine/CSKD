@@ -5,7 +5,7 @@ This is the official implementation of our paper titled [Channel-spatial knowled
 ## Overview
 CSKD aims to force the student network to mimic the channel and position interdependencies of the teacher network. These interdependencies are captured using two self-attention modules: Channel self-Attention Module (CAM) and Position self-Attention Module (PAM). Interestingly, thanks to the Centered Kernel Alignment (CKA), dimension enhancement step for the student feature maps is not required.
 
-![flowchart](figures/seg_imgs.pdf)
+![flowchart](figures/CSKD.png)
 
 
 ## Requirement
