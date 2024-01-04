@@ -310,7 +310,6 @@ class Trainer(object):
             else:
                 task_loss = self.criterion(s_outputs[0], targets)
             
-            kd_loss = torch.tensor(0.).cuda()
             cwd_logit_loss = torch.tensor(0.).cuda()
             sa_loss = torch.tensor(0.).cuda()
             
@@ -334,7 +333,7 @@ class Trainer(object):
                 sa_loss = self.args.lambda_cam*loss_CAM + self.args.lambda_pam*loss_PAM 
                 
 
-            losses = sa_loss + kd_loss + cwd_logit_loss + task_loss
+            losses = sa_loss + cwd_logit_loss + task_loss
 
             lr = self.adjust_lr(base_lr=args.lr, iter=iteration-1, max_iter=args.max_iterations, power=0.9)
             self.optimizer.zero_grad()
@@ -342,7 +341,6 @@ class Trainer(object):
             self.optimizer.step()
 
             task_loss_reduced = self.reduce_mean_tensor(task_loss)
-            kd_loss_reduced = self.reduce_mean_tensor(kd_loss)
             cwd_logit_loss_reduced = self.reduce_mean_tensor(cwd_logit_loss)
             sa_loss_reduced = self.reduce_mean_tensor(sa_loss)
             
@@ -351,12 +349,11 @@ class Trainer(object):
             eta_string = str(datetime.timedelta(seconds=int(eta_seconds)))
             if iteration % log_per_iters == 0 and save_to_disk:
                 logger.info(
-                    "Iters: {:d}/{:d} || Lr: {:.6f} || Task Loss: {:.4f} || KD Loss: {:.4f}" \
+                    "Iters: {:d}/{:d} || Lr: {:.6f} || Task Loss: {:.4f}" \
                         "|| cwd_logit_loss: {:.4f} || sa_loss: {:.4f} ||" \
                         "|| Cost Time: {} || Estimated Time: {}".format(
                         iteration, args.max_iterations, self.optimizer.param_groups[0]['lr'], 
-                        task_loss_reduced.item(),
-                        kd_loss_reduced.item(), 
+                        task_loss_reduced.item()
                         cwd_logit_loss_reduced.item(),
                         sa_loss_reduced.item(),
                         str(datetime.timedelta(seconds=int(time.time() - start_time))), 
