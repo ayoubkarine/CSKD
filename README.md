@@ -68,10 +68,10 @@ If you use this code, please cite our paper:
 @article{cskd,
   title={Channel-spatial knowledge distillation for efficient semantic segmentation},
   author={Ayoub Karine, Thibault Napoléon, Maher Jridi},
-  journal={},
+  journal={ELSEVIER Pattern Recognition Letters},
   volume={-},
   pages={-},
-  year={-}
+  year={2024}
 }
 ```
 
