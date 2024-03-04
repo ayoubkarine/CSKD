@@ -69,8 +69,8 @@ If you use this code, please cite our paper:
   title={Channel-spatial knowledge distillation for efficient semantic segmentation},
   author={Ayoub Karine, Thibault Napoléon, Maher Jridi},
   journal={ELSEVIER Pattern Recognition Letters},
-  volume={-},
-  pages={-},
+  volume={180},
+  pages={58-54},
   year={2024}
 }
 ```
