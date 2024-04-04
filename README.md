@@ -1,7 +1,6 @@
 # CSKD: Channel-Spatial Knowledge Distillation for efficient semantic segmentation
 
-This is the official implementation of our paper titled [[Channel-spatial knowledge distillation for efficient semantic segmentation](https://www.sciencedirect.com/journal/pattern-recognition-letters)](https://www.sciencedirect.com/science/article/abs/pii/S016786552400059X)
-
+This is the official implementation of our paper titled [Channel-spatial knowledge distillation for efficient semantic segmentation](https://www.sciencedirect.com/journal/pattern-recognition-letters)
 ## Overview
 CSKD aims to force the student network to mimic the channel and position interdependencies of the teacher network. These interdependencies are captured using two self-attention modules: Channel self-Attention Module (CAM) and Position self-Attention Module (PAM). Interestingly, thanks to the Centered Kernel Alignment (CKA), dimension enhancement step for the student feature maps is not required.
 
