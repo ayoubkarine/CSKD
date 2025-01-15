@@ -55,8 +55,8 @@ bash sh_scripts/citys/visualize/deeplabv3_resnet18_citys_student_cskd.sh
 Example of generated segmentation maps: 
 
 ![flowchart](figures/segmentation_results.png)
-[31] C. Yang, H. Zhou, Z. An, X. Jiang, Y. Xu, Q. Zhang, Cross-image relational knowledge distillation for semantic segmentation, in: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, CVPR 2022, pp. 12319–12328. \
-[33] C. Shu, Y. Liu, J. Gao, Z. Yan, C. Shen, Channel-wise knowledge distillation for dense prediction, in: Proceedings of the IEEE/CVF International Conference on Computer Vision, CVPR 2021, pp. 5311–5320. 
+[27] C. Yang, H. Zhou, Z. An, X. Jiang, Y. Xu, Q. Zhang, Cross-image relational knowledge distillation for semantic segmentation, in: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, CVPR 2022, pp. 12319–12328. \
+[29] C. Shu, Y. Liu, J. Gao, Z. Yan, C. Shen, Channel-wise knowledge distillation for dense prediction, in: Proceedings of the IEEE/CVF International Conference on Computer Vision, CVPR 2021, pp. 5311–5320. 
 
 Do not hesitate to contact us if you have any questions
 
